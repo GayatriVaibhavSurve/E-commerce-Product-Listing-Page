@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- menu start -->
+    <header>
+      <input type="checkbox" name="" id="c1" />
+      <div class="logo"><h1>LoGo</h1></div>
+      <div class="search-box">
+        <form action="" method="post">
+          <input type="text" name="search" id="search" placeholder="search" />
+          <button type="submit"><i class="fa fa-search i-menu"></i></button>
+        </form>
+      </div>
+      <ul class="mainul">
+        <li id="filterr">
+          <a href="#">Filter</a>
+          <ul class="drop-down filter">
+            <li id="btns"></li>
+          </ul>
+        </li>
+
+        <li class="cart">
+          <a id="cartmenu" href="cart.html">Cart</a
+          ><span id="totalItems">0</span>
+        </li>
+      </ul>
+
+      <div class="menu">
+        <label for="c1">
+          <i class="fa fa-bars i-menu"></i>
+        </label>
+      </div>
+    </header>
+    <!-- menu end    -->
+
+    <!-- product list start -->
+
+    <div class="gallery" id="productslist"></div>
+
+    <!-- product list end -->
+
+    <!-- footer start -->
+    <footer class="footerConatainer">
+      <div class="socialIcons">
+        <a href="#"><i class="fa fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-brands fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footerBottom">
+        <p>
+          Copyright &copy;2023 : Designed by
+          <span class="Designer">Gayatri</span>
+        </p>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <script src="products.js"></script>
+    <script src="search.js"></script>
+    <script src="filter.js"></script>
+    <script>
+      let old_data = JSON.parse(sessionStorage.getItem("cart"));
+      let total_items = old_data.length;
+      document.getElementById("totalItems").innerHTML = total_items;
+    </script>
+  </body>
+</html>

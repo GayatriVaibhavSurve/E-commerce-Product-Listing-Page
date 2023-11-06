@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+  </head>
+  <body onload="displaycart()">
+    <!-- menu start -->
+    <header>
+      <input type="checkbox" name="" id="c1" />
+      <div class="logo"><h1>LOGO</h1></div>
+    </header>
+    <!-- menu end    -->
+
+    <!-- product list start -->
+
+    <div class="gallery" id="productslist">
+      <div class="sidebar">
+        <div class="head"><p>My Cart</p></div>
+        <div class="maincart"><div id="cartItem">Your cart is empty</div></div>
+        <div class="foot">
+          <h3>Total</h3>
+          <h2 id="total"><i class="fa fa-rupee"></i> 0.00</h2>
+        </div>
+        <button type="submit" class="Pay" onclick="paynow()">Pay</button>
+      </div>
+    </div>
+
+    <!-- product list end -->
+
+    <!-- footer start -->
+    <footer class="footerConatainer">
+      <div class="socialIcons">
+        <a href="#"><i class="fa fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-brands fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footerBottom">
+        <p>
+          Copyright &copy;2023 : Designed by
+          <span class="Designer">Gayatri</span>
+        </p>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </body>
+</html>

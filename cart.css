@@ -1,0 +1,97 @@
+.sidebar {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 15px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.head {
+  background-color: goldenrod;
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.addBtn {
+  background-color: green;
+}
+.removeBtn {
+  background-color: red;
+}
+.img-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.images {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.content {
+  margin: 1%;
+  float: none;
+}
+
+.content h3 {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cartItem .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0%;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.gallery button {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.addBtn {
+  background-color: green;
+}
+.removeBtn {
+  background-color: red;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+#totalItems {
+  color: black;
+  font-weight: bold;
+}
+.Pay {
+  background-color: green;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.content:first-child,
+.content:nth-child(2),
+.content:nth-child(3) {
+  margin: 0;
+}
+/* footer css */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-top: 1px solid #333;
+}
+.foot h3 {
+  margin: 0;
+  padding-top: 0;
+}
