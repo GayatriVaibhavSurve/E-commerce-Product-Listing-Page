@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Payment Checkout Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    />
+    <link rel="stylesheet" href="payment.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- payment gatway start -->
+      <div class="payment">
+        <h2>User Details</h2>
+        <div class="form">
+          <div class="card space icon-relative">
+            <label class="label">Customer Name:</label>
+            <input
+              type="text"
+              class="input"
+              placeholder="Customer Name"
+              size="65"
+            />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="card space icon-relative">
+            <label class="label">Address:</label>
+            <input
+              type="text"
+              class="input"
+              placeholder="Address"
+            />
+          </div>
+          <div class="card-grp space">
+            <div class="card-item icon-relative">
+              <label class="label">Mobile Number:</label>
+              <input
+                type="number"
+                name="expiry-data"
+                class="input"
+              />
+            </div>
+            <div class="card-item icon-relative">
+              <label class="label">Pin Code:</label>
+              <input
+                type="number"
+                class="input"
+              />
+            </div>
+          </div>
+
+          <div id="btn">
+            Pay <i class="fa fa-rupee"></i><span id="payamount"></span>
+          </div>
+        </div>
+      </div>
+      <!-- payment gatway end -->
+    </div>
+    <!-- pop up msg start -->
+    <div class="popup" id="success">
+      <div class="popup-content">
+        <div class="title">
+          <h3>Success!</h3>
+        </div>
+        <p class="para">Bill Payment Successful!</p>
+        <form action="">
+          <a href="#" class="button" id="s_button">OKAY</a>
+        </form>
+      </div>
+    </div>
+    <!-- pop up msg end -->
+  </body>
+  <script>
+    var paytotal = new URLSearchParams(window.location.search);
+    let bill = paytotal.get("key");
+    document.getElementById("payamount").innerHTML = bill;
+    var success_popup = document.getElementById("success");
+    var s_close = document.getElementById("s_button");
+    var s_btn = document.getElementById("btn");
+    s_btn.onclick = function () {
+      success_popup.style.display = "block";
+    };
+    s_close.onclick = function () {
+      success_popup.style.display = "none";
+    };
+  </script>
+</html>
